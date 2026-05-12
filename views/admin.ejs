@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+
+<section class="page-section">
+  <div class="content-card">
+    <h1>Admin Dashboard</h1>
+
+    <p>
+      This dashboard will be used to manage client requests, courier submissions,
+      bookings, payments, and service updates.
+    </p>
+
+    <div class="dashboard-grid">
+      <div class="dashboard-card">
+        <h2>Courier Requests</h2>
+        <p>View and manage delivery requests.</p>
+        <a href="/courier">View Courier Form</a>
+      </div>
+
+      <div class="dashboard-card">
+        <h2>Bookings</h2>
+        <p>Track appointments and consultations.</p>
+        <a href="/booking">View Booking Form</a>
+      </div>
+
+      <div class="dashboard-card">
+        <h2>Payments</h2>
+        <p>Stripe payment setup coming soon.</p>
+        <a href="#">Payment Setup</a>
+      </div>
+
+      <div class="dashboard-card">
+        <h2>Messages</h2>
+        <p>Contact messages will appear here after database connection.</p>
+        <a href="/contact">View Contact Form</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
