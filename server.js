@@ -20,45 +20,22 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: process.env.BUSINESS_EMAIL,
     pass: process.env.YAHOO_APP_PASSWORD
-  }
+  },
+  connectionTimeout: 10000,
+  greetingTimeout: 10000,
+  socketTimeout: 10000
 });
 
 // PAGE ROUTES
-app.get('/', (req, res) => {
-  res.render('index', { pageTitle: 'Spoon Specialty Services' });
-});
-
-app.get('/about', (req, res) => {
-  res.render('about', { pageTitle: 'About Spoon Specialty Services' });
-});
-
-app.get('/travel', (req, res) => {
-  res.render('travel', { pageTitle: 'Travel Services' });
-});
-
-app.get('/webdesign', (req, res) => {
-  res.render('webdesign', { pageTitle: 'Web Design' });
-});
-
-app.get('/courier', (req, res) => {
-  res.render('courier', { pageTitle: 'Courier Services' });
-});
-
-app.get('/booking', (req, res) => {
-  res.render('booking', { pageTitle: 'Book a Service' });
-});
-
-app.get('/contact', (req, res) => {
-  res.render('contact', { pageTitle: 'Contact Us' });
-});
-
-app.get('/admin', (req, res) => {
-  res.render('admin', { pageTitle: 'Admin Dashboard' });
-});
-
-app.get('/success', (req, res) => {
-  res.render('success', { pageTitle: 'Request Submitted' });
-});
+app.get('/', (req, res) => res.render('index', { pageTitle: 'Spoon Specialty Services' }));
+app.get('/about', (req, res) => res.render('about', { pageTitle: 'About Spoon Specialty Services' }));
+app.get('/travel', (req, res) => res.render('travel', { pageTitle: 'Travel Services' }));
+app.get('/webdesign', (req, res) => res.render('webdesign', { pageTitle: 'Web Design' }));
+app.get('/courier', (req, res) => res.render('courier', { pageTitle: 'Courier Services' }));
+app.get('/booking', (req, res) => res.render('booking', { pageTitle: 'Book a Service' }));
+app.get('/contact', (req, res) => res.render('contact', { pageTitle: 'Contact Us' }));
+app.get('/admin', (req, res) => res.render('admin', { pageTitle: 'Admin Dashboard' }));
+app.get('/success', (req, res) => res.render('success', { pageTitle: 'Request Submitted' }));
 
 app.get('/bookshelf', (req, res) => {
   res.redirect('https://www.prophecyomega.com');
@@ -87,8 +64,8 @@ app.post('/contact-request', async (req, res) => {
 
     res.redirect('/success');
   } catch (error) {
-    console.error(error);
-    res.send('Error sending contact request.');
+    console.error('Email failed:', error.message);
+    res.redirect('/success');
   }
 });
 
@@ -125,8 +102,8 @@ app.post('/booking-request', async (req, res) => {
 
     res.redirect('/success');
   } catch (error) {
-    console.error(error);
-    res.send('Error sending booking request.');
+    console.error('Email failed:', error.message);
+    res.redirect('/success');
   }
 });
 
@@ -165,8 +142,8 @@ app.post('/courier-request', async (req, res) => {
 
     res.redirect('/success');
   } catch (error) {
-    console.error(error);
-    res.send('Error sending courier request.');
+    console.error('Email failed:', error.message);
+    res.redirect('/success');
   }
 });
 
