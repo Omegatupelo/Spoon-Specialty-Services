@@ -35,6 +35,25 @@ const transporter = nodemailer.createTransport({
 app.get('/', (req, res) => {
   res.render('index');
 });
+app.get('/about', (req, res) => {
+  res.render('about');
+});
+
+app.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
+app.get('/booking', (req, res) => {
+  res.render('booking');
+});
+
+app.get('/admin', (req, res) => {
+  res.render('admin');
+});
+
+app.get('/success', (req, res) => {
+  res.render('success');
+});
 
 app.get('/travel', (req, res) => {
   res.render('travel');

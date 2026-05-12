@@ -423,5 +423,41 @@ nav a:hover {
   .courier-card h1 {
     font-size: 38px;
   }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: gold;
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+}
 }
