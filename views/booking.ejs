@@ -1,12 +1,12 @@
 <%- include('partials/header') %>
 
-<section class="page-section">
-  <div class="content-card">
+<section class="booking-page">
+  <div class="booking-card">
     <h1>Book a Service</h1>
 
     <p>
-      Use this form to request an appointment, consultation, travel quote, courier
-      service, or web design project.
+      Request a consultation, appointment, courier service, travel quote, or website project.
+      We will review your request and contact you to confirm availability.
     </p>
 
     <form class="business-form" action="/booking-request" method="POST">
@@ -27,7 +27,8 @@
 
       <div class="form-group">
         <label>Service Type</label>
-        <select name="serviceType">
+        <select name="serviceType" required>
+          <option value="">Select a service</option>
           <option>Travel Consultation</option>
           <option>Website Consultation</option>
           <option>Courier Request</option>
@@ -36,14 +37,16 @@
         </select>
       </div>
 
-      <div class="form-group">
-        <label>Preferred Date</label>
-        <input type="date" name="preferredDate">
-      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Preferred Date</label>
+          <input type="date" name="preferredDate">
+        </div>
 
-      <div class="form-group">
-        <label>Preferred Time</label>
-        <input type="time" name="preferredTime">
+        <div class="form-group">
+          <label>Preferred Time</label>
+          <input type="time" name="preferredTime">
+        </div>
       </div>
 
       <div class="form-group">

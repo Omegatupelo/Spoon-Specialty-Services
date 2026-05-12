@@ -459,5 +459,148 @@ header {
   .nav-links a {
     font-size: 15px;
   }
+
+  .booking-page {
+  min-height: 100vh;
+  padding: 90px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.92)),
+    url('/images/spoon-logo.jpg');
+  background-size: 520px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.booking-card {
+  max-width: 850px;
+  margin: auto;
+  padding: 50px;
+  background: rgba(12, 12, 12, 0.94);
+  border: 1px solid gold;
+  border-radius: 24px;
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.3);
+}
+
+.booking-card h1 {
+  text-align: center;
+  color: gold;
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.booking-card p {
+  text-align: center;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.business-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: gold;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #555;
+  background: #111;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: gold;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.45);
+}
+
+.submit-btn {
+  padding: 17px;
+  border: none;
+  border-radius: 14px;
+  background: gold;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: orange;
+}
+
+@media (max-width: 768px) {
+  .booking-card {
+    padding: 30px;
+  }
+
+  .booking-card h1 {
+    font-size: 38px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+.success-page {
+  min-height: 80vh;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.92)),
+    url('/images/spoon-logo.jpg');
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.success-card {
+  max-width: 700px;
+  text-align: center;
+  background: rgba(12,12,12,.94);
+  border: 1px solid gold;
+  border-radius: 24px;
+  padding: 50px;
+  color: white;
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.3);
+}
+
+.success-card h1 {
+  color: gold;
+  font-size: 48px;
+}
+
+.success-btn {
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+}
 }
 }
