@@ -602,5 +602,53 @@ header {
   margin-top: 25px;
   text-decoration: none;
 }
+
+.success-container {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.success-card {
+    background: rgba(0, 0, 0, 0.88);
+    padding: 50px;
+    border-radius: 20px;
+    border: 2px solid gold;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0 0 25px rgba(255,215,0,0.4);
+}
+
+.success-card h1 {
+    color: gold;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.success-card p {
+    color: white;
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+.success-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.success-btn:hover {
+    background: orange;
+    transform: scale(1.05);
+}
 }
 }
