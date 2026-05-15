@@ -1,0 +1,36 @@
+<%- include("partials/header") %>
+
+<section class="payment-page">
+  <div class="payment-card">
+    <h1>Make a Payment</h1>
+    <p>
+      Securely pay Spoon Specialty Services LLC for web design, booking,
+      courier, travel consultation, or other approved services.
+    </p>
+
+    <form action="/create-checkout-session" method="POST">
+      <label>Service Type</label>
+      <select name="service" required>
+        <option value="Web Design Service">Web Design Service</option>
+        <option value="Booking Service">Booking Service</option>
+        <option value="Courier Service">Courier Service</option>
+        <option value="Travel Consultation">Travel Consultation</option>
+        <option value="Custom Service">Custom Service</option>
+      </select>
+
+      <label>Amount</label>
+      <input 
+        type="number" 
+        name="amount" 
+        min="1" 
+        step="0.01" 
+        placeholder="Enter amount"
+        required
+      />
+
+      <button type="submit">Pay Securely</button>
+    </form>
+  </div>
+</section>
+
+<%- include("partials/footer") %>
